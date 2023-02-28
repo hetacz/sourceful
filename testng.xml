@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default" verbose="1">
+
+    <parameter name="browser" value="CHROME"/>
+    <parameter name="headless" value="false"/>
+
+    <test name="Default">
+        <packages>
+            <package name="org.example.sourceful.tests"/>
+        </packages>
+    </test>
+</suite>
