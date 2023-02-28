@@ -13,21 +13,15 @@ public class BasePage {
 
     protected final WebDriver driver;
     protected final WebDriverWait wait;
-    protected final JavascriptExecutor js;
     private static final int FLUENT_WAIT = 30;
 
     protected BasePage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(FLUENT_WAIT));
-        this.js = (JavascriptExecutor) driver;
     }
 
     protected final <T> void click(T locator) {
         getClickableElement(locator).click();
-    }
-
-    protected final <T> void jsClick(T locator) {
-        js.executeScript("arguments[0].click();", getVisibleElement(locator));
     }
 
     protected final <T> void type(T locator, CharSequence... text) {

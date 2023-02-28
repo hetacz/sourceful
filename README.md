@@ -10,8 +10,8 @@
 
 **-Dheadless**
 
-- true
-- false (default)
+- true (default)
+- false
 
 **-DsuiteFile**
 
